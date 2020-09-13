@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'search/main.css' %}" />
+</head>
+<body>
+    <h1>{{ student.firstname }} {{ student.lastname }}</h1>
+    <div>
+        <img src="/{{ student.photo }}" alt="{{ student.firstname }} {{ student.lastname }}" style="width: 512px;" > <br/><br/>
+    </div>
+    <div>
+        <p>filiere : {{ student.speciality }}</p>
+        <p>adresse : {{ student.address }}</p>
+        <p>ville : {{ student.city }}</p>
+        <p>code postal : {{ student.postal_code }}</p>
+    </div>
+</body>
+</html>
