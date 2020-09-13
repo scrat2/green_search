@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+
+<html>
+    <head>
+
+    <meta charset="utf-8">
+    <title>GreenIt</title><!--Normalement responsive, dites moi si c'est ok chez vous-->
+    <link rel="stylesheet" type="text/css" href="{% static 'search/main.css' %}" />
+    </head>
+    <body>
+        <h1>TP3 GreenIt</h1>
+        <div>
+            <img src="{% static 'search/images/nature.jpg' %}" alt="Le dieu" > <br/><br/>
+        </div>
+        <form action=""> <!--Ici mettre le lien de la page de gestion normalement php mais pas le droit ici-->
+            <div>
+                <input type="text" placeholder=" Nom" id="nom">
+                <input type="text" placeholder=" Prenom" id="prenom">
+                <input type="text" placeholder=" Filiere" id="filiere">
+            </div>
+            <br/>
+            <div>
+                <input type="text" placeholder=" Adresse" id="adresse">
+                <input type="text" placeholder=" Code Postal" id="codepostal">
+                <input type="text" placeholder=" Ville" id="ville">
+            </div>
+            <br/>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            <br/>
+            <div>
+                <input type="text" placeholder=" Compteur " disabled>
+                <a href="#">MentionLegal</a>
+            </div>
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+{% load static %}
+<!doctype html>
+
+<html lang="fr">
+    <head>
+
+    <meta charset="utf-8">
+    <title>add user</title><!--Normalement responsive, dites moi si c'est ok chez vous-->
+    <link rel="stylesheet" type="text/css" href="{% static 'search/main.css' %}" />
+    </head>
+    <body>
+        <h1>Add</h1>
+        <div>
+            <img src="{% static 'search/images/nature.jpg' %}" alt="Le dieu" > <br/><br/>
+        </div>
+        <form action="#" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+                <label for="{{ form.firstname.id_for_label }}"></label>
+                {{ form.firstname }}
+                <label for="{{ form.lastname.id_for_label }}"></label>
+                {{ form.lastname }}
+                <label for="{{ form.speciality.id_for_label }}"></label>
+                {{ form.speciality }}
+            </div>
+            <br/>
+            <div>
+                <label for="{{ form.address.id_for_label }}"></label>
+                {{ form.address }}
+                <label for="{{ form.postalCode.id_for_label }}"></label>
+                {{ form.postalCode }}
+                <label for="{{ form.city.id_for_label }}"></label>
+                {{ form.city }}
+            </div>
+            <br/>
+            <div>
+                <label for="{{ form.picture.id_for_label }}"></label>
+                {{ form.picture }}
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </body>
+</html>
